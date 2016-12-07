@@ -21,4 +21,3 @@ Inf = 1.0/0.0
 @Million_dollar_stores = Store.where(annual_revenue: (1000000..Inf))
 
 puts "There are #{@Million_dollar_stores.size} stores that make over 1M in annual revenue"
-

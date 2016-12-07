@@ -7,11 +7,18 @@ class Store < ActiveRecord::Base
 
   has_many :employees
 
+  validates :name, presence: true, length: { minimum: 3 }
+  validates :annual_revenue, presence: true, numericality: true, length: { minimum: 0 }
+
 end
 
 class Employee < ActiveRecord::Base
 
   belongs_to :store
+
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :store_id, presence: true
 
 end
 
